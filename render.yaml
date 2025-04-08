@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: email-scraper
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install
+    startCommand: gunicorn main:app
+    plan: free
+    region: oregon
