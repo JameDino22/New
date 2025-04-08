@@ -1,3 +1,8 @@
+@app.route("/", methods=["GET"])
+def home():
+    return "✅ Email Extractor is Live!"
+
+
 from flask import Flask, request, jsonify
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
