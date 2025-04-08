@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from playwright.sync_api import sync_playwright
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all domains
 
 def extract_emails_from_url(url):
     with sync_playwright() as p:
