@@ -30,6 +30,10 @@ def extract_emails():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/", methods=["GET"])
+def home():
+    return "✅ Email Extractor is Live!"
+
 import os
 
 if __name__ == '__main__':
